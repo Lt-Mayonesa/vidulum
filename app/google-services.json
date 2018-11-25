@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "332029143118",
+    "firebase_url": "https://vidulum-918f5.firebaseio.com",
+    "project_id": "vidulum-918f5",
+    "storage_bucket": "vidulum-918f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332029143118:android:0c041a3551ad6efc",
+        "android_client_info": {
+          "package_name": "ar.com.joaquincampero.apps.vidulum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332029143118-lsk5qurc8f798dt4qnc8rv4ufe5v3q3s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.joaquincampero.apps.vidulum",
+            "certificate_hash": "3ea4bca10ed107c73f52c5a2ddac66e170ed9ca4"
+          }
+        },
+        {
+          "client_id": "332029143118-c65c7qh1rdff4fsgs5dsuav0q4gvs9lm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUiB4a1tnW-bk1K8erbAYuxHkyzzmVlyo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332029143118-c65c7qh1rdff4fsgs5dsuav0q4gvs9lm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
