@@ -4,33 +4,49 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import javax.inject.Inject;
 
 import ar.com.joaquincampero.apps.vidulum.R;
+import ar.com.joaquincampero.apps.vidulum.ui.BaseFragment;
+import ar.com.joaquincampero.apps.vidulum.vm.factory.SessionActivityFactory;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
-  private MainViewModel mViewModel;
+    @Inject
+    SessionActivityFactory sessionActivityFactory;
+    private SessionViewModel mViewModel;
 
-  public static MainFragment newInstance() {
-    return new MainFragment();
-  }
+    @BindView(R.id.message)
+    TextView mTxtMessage;
 
-  @Nullable
-  @Override
-  public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                           @Nullable Bundle savedInstanceState) {
-    return inflater.inflate(R.layout.main_fragment, container, false);
-  }
+    public static MainFragment newInstance() {
+        return new MainFragment();
+    }
 
-  @Override
-  public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-    super.onActivityCreated(savedInstanceState);
-    mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-    // TODO: Use the ViewModel
-  }
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.main_fragment, container, false);
+        ButterKnife.bind(this, view);
+        return view;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mViewModel = ViewModelProviders.of(this, sessionActivityFactory).get(SessionViewModel.class);
+
+        mViewModel.getCurrentUser().observe(this, firebaseUser -> {
+            mTxtMessage.setText(firebaseUser != null ? firebaseUser.getDisplayName() : "Not Signed In");
+        });
+    }
 
 }
