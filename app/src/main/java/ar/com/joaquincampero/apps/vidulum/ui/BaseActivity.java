@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 import javax.inject.Inject;
 
 import ar.com.joaquincampero.apps.vidulum.ui.main.SessionViewModel;
-import ar.com.joaquincampero.apps.vidulum.vm.factory.SessionActivityFactory;
+import ar.com.joaquincampero.apps.vidulum.ui.factory.SessionActivityFactory;
 import dagger.android.support.DaggerAppCompatActivity;
 
 /**

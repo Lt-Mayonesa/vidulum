@@ -1,4 +1,4 @@
-package ar.com.joaquincampero.apps.vidulum.vm.factory;
+package ar.com.joaquincampero.apps.vidulum.ui.factory;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;

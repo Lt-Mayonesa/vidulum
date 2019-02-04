@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ar.com.joaquincampero.apps.vidulum.ui.transaction.NewTransactionFragment">
+
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input_transaction_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quien"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/input_transaction_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime" />
+
+        <EditText
+            android:id="@+id/input_transaction_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="$0.00"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/input_transaction_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Que"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/button_transaction_create"
+            style="@style/Button.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Save" />
+    </LinearLayout>
+
+</FrameLayout>

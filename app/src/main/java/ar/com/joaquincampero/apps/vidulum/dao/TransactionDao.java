@@ -7,6 +7,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+import ar.com.joaquincampero.apps.vidulum.model.Transaction;
 import ar.com.joaquincampero.apps.vidulum.model.User;
 
 /**
@@ -14,15 +15,15 @@ import ar.com.joaquincampero.apps.vidulum.model.User;
  * on 12/8/18.
  */
 @Dao
-public interface UserDao {
+public interface TransactionDao extends BaseDao<Transaction> {
 
     @Insert
-    void insert(User user);
+    void insert(Transaction transaction);
 
-    @Query("DELETE FROM user")
+    @Query("DELETE FROM `transaction`")
     void deleteAll();
 
-    @Query("SELECT * from user")
-    LiveData<List<User>> getAllUsers();
+    @Query("SELECT * FROM `transaction` ORDER BY date DESC")
+    LiveData<List<Transaction>> getAll();
 
 }

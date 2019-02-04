@@ -2,6 +2,7 @@ package ar.com.joaquincampero.apps.vidulum.di.module;
 
 import ar.com.joaquincampero.apps.vidulum.ui.main.MainActivity;
 import ar.com.joaquincampero.apps.vidulum.ui.main.MainFragment;
+import ar.com.joaquincampero.apps.vidulum.ui.transaction.NewTransactionFragment;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
@@ -17,5 +18,8 @@ public abstract class DestinationModule {
 
     @ContributesAndroidInjector
     abstract MainFragment mainFragment();
+
+    @ContributesAndroidInjector
+    abstract NewTransactionFragment newTransactionFragment();
 
 }

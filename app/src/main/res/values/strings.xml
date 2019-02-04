@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Vidulum</string>
     <string name="firebase_client_id">332029143118-c65c7qh1rdff4fsgs5dsuav0q4gvs9lm.apps.googleusercontent.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
